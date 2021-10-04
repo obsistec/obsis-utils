@@ -1,6 +1,6 @@
 {
   "name": "obsis-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/obsis-utils.js",
   "module": "dist/obsis-utils.mjs",
   "typings": "dist/obsis-utils.d.ts",
@@ -13,6 +13,7 @@
     "rollup-plugin-dts": "^4.0.0",
     "rollup-plugin-esbuild": "^4.5.0",
     "typescript": "^4.4.3",
+    "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
