@@ -1,0 +1,19 @@
+{
+  "name": "obsis-utils",
+  "version": "0.0.1",
+  "main": "dist/obsis-utils.js",
+  "module": "dist/obsis-utils.mjs",
+  "typings": "dist/obsis-utils.d.ts",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.3",
+    "rollup": "^2.58.0",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "typescript": "^4.4.3"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"obsis-utils.js","sources":["../src/index.ts"],"sourcesContent":["export function log(text: string): string {\n  console.debug(text);\n\n  return text;\n}\n"],"names":[],"mappings":";;;;aAAoB,MAAsB;AACxC,UAAQ,MAAM;AAEd,SAAO;AAAA;;;;"}
