@@ -1,6 +1,6 @@
 {
   "name": "obsis-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/obsis-utils.js",
   "module": "dist/obsis-utils.mjs",
   "typings": "dist/obsis-utils.d.ts",
@@ -16,7 +16,13 @@
     "rollup": "^2.58.0",
     "rollup-plugin-dts": "^4.0.0",
     "rollup-plugin-esbuild": "^4.5.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^4.4.3",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "peerDependencies": {
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
