@@ -1,35 +1,24 @@
 import dts from "rollup-plugin-dts";
-import esbuild from "rollup-plugin-esbuild";
+import esBuild from "rollup-plugin-esbuild";
+import resolve from "@rollup/plugin-node-resolve";
+import babel from "@rollup/plugin-babel";
 
 const name = require("./package.json").main.replace(/\.js$/, "");
 
-const bundle = (config) => ({
-  ...config,
-  input: "src/index.ts",
-  external: (id) => !/^[./]/.test(id),
-});
+function bundle(config) {
+  return { ...config, input: "src/index.ts", external: (id) => !/^[./]/.test(id) };
+}
 
 export default [
   bundle({
-    plugins: [esbuild()],
+    plugins: [esBuild({ target: "es2019", minify: true }), resolve(), babel({ babelHelpers: "bundled" })],
     output: [
-      {
-        file: `${name}.js`,
-        format: "cjs",
-        sourcemap: true,
-      },
-      {
-        file: `${name}.mjs`,
-        format: "es",
-        sourcemap: true,
-      },
+      { file: `${name}.js`, format: "cjs", sourcemap: true },
+      { file: `${name}.mjs`, format: "es", sourcemap: true },
     ],
   }),
   bundle({
     plugins: [dts()],
-    output: {
-      file: `${name}.d.ts`,
-      format: "es",
-    },
+    output: { file: `${name}.d.ts`, format: "es" },
   }),
 ];

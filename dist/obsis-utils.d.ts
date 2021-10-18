@@ -136,7 +136,7 @@ declare const localeConfig: {
     emptyMessage: string;
 };
 
-declare function useDownloadFile(createElement: any, createObjectURL: any, Blob: any): {
+declare function useDownloadFile(): {
     downloadPDF: ({ content }: {
         content: any;
     }) => void;
