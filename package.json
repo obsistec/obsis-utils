@@ -1,8 +1,7 @@
 {
   "name": "obsis-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/obsis-utils.js",
-  "module": "dist/obsis-utils.mjs",
   "typings": "dist/obsis-utils.d.ts",
   "scripts": {
     "build": "rm -rf dist && rollup -c"

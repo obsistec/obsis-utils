@@ -14,14 +14,11 @@ export default [
   bundle({
     plugins: [
       peerDepsExternal(),
-      esBuild({ target: "es2019", minify: false }),
+      esBuild({ target: "es2019", minify: true }),
       resolve(),
       babel({ babelHelpers: "bundled" }),
     ],
-    output: [
-      { file: `${name}.js`, format: "cjs", sourcemap: true },
-      { file: `${name}.mjs`, format: "es", sourcemap: true },
-    ],
+    output: [{ file: `${name}.js`, format: "cjs", sourcemap: true }],
   }),
   bundle({
     plugins: [dts()],
