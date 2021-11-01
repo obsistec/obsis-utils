@@ -7,3 +7,4 @@ export * from "./primevue";
 export * from "./useDownloadFile";
 export * from "./useFilter";
 export * from "./usePagination";
+export * from "./useRouterUtils";

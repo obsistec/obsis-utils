@@ -3,6 +3,20 @@
   "version": "0.0.4",
   "main": "dist/obsis-utils.js",
   "typings": "dist/obsis-utils.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obsistec/obsis-utils.git"
+  },
+  "keywords": [
+    "obsis",
+    "obsis-utils"
+  ],
+  "author": "paulloclara",
+  "bugs": {
+    "url": "https://github.com/obsistec/obsis-utils/issues"
+  },
+  "homepage": "https://github.com/obsistec/obsis-utils#readme",
+  "description": "OBSIS Utils",
   "scripts": {
     "build": "rm -rf dist && rollup -c"
   },
@@ -27,5 +41,5 @@
     "vuex": "^4.0.0-0"
   },
   "license": "UNLICENSED",
-  "private": true
+  "private": false
 }
