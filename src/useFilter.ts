@@ -12,3 +12,9 @@ export function useFilter({ ignore }: { ignore: string[] } = { ignore: [] }) {
 
   return { hasFilters, hasAnyFilters, hasSpecificFilter };
 }
+
+export const sexFilterOptions = [
+  { label: "Todos", value: null },
+  { label: "Masculino", value: "M" },
+  { label: "Feminino", value: "F" },
+];

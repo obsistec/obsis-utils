@@ -20,13 +20,6 @@ export function detectCardType(number: string) {
   }
 }
 
-export function compareDates(date: string) {
-  const today = new Date();
-  const dateOBJ = new Date(date.includes("T") ? date : date.replaceAll("-", "/"));
-
-  return new Date(dateOBJ.setDate(dateOBJ.getDate() + 1)) >= today ? true : false;
-}
-
 export function getUserName(firstName?: string, lastName?: string, full = true) {
   const name = String(`${firstName} ${lastName}`.trim());
 

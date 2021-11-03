@@ -50,6 +50,7 @@ declare function getAgendamentoStatus(value: string): {
 declare function isCPF(value: string | number | undefined | null): boolean;
 declare function isCNPJ(value: string | number | undefined | null): boolean;
 declare function isEditFormByRouteName(routeName: RouteRecordName | null | undefined): boolean | undefined;
+declare function compareDates(date1: string, date2?: string): boolean;
 
 declare function addUTC(date?: string): string;
 declare function formatDate(date?: string): string;
@@ -88,7 +89,6 @@ declare function formatGender(value?: "M" | "F" | null): "Masculino" | "Feminino
 declare function formatCreditCard(value?: string): string;
 
 declare function detectCardType(number: string): string | undefined;
-declare function compareDates(date: string): boolean;
 declare function getUserName(firstName?: string, lastName?: string, full?: boolean): string;
 declare function splitUserName(userName: string): string[];
 
@@ -152,6 +152,13 @@ declare function useFilter({ ignore }?: {
     hasAnyFilters: vue.ComputedRef<number>;
     hasSpecificFilter: (items: string[]) => boolean;
 };
+declare const sexFilterOptions: ({
+    label: string;
+    value: null;
+} | {
+    label: string;
+    value: string;
+})[];
 
 declare type PaginationEvent = {
     page: number;
@@ -175,4 +182,4 @@ declare function useRouterUtils(): {
     normalizeRouteParam: (routeParam?: string | null | undefined) => string;
 };
 
-export { PaginationEvent, addDateMMAAAAMask, addDateMask, addHoursMask, addMoneyMask, addUTC, agendaCalendarTypes, agendaTypeOptions, agendamentoStatus, compareDates, conselhos, dayOfWeek, detectCardType, formatCPF, formatCPFToLGPD, formatCreditCard, formatDate, formatDateEn, formatDateLong, formatDateMMAAAA, formatDateTime, formatDateTimeEn, formatDateTimeLong, formatFileName, formatFullDateLong, formatGender, formatHours, formatLocality, formatLocalityLong, formatMoneyNumberToString, formatNumericDateLong, formatPhone, formatZipCode, genderOptions, getAgendaCalendarTypes, getAgendaTypeOptions, getAgendamentoStatus, getHourInDate, getUserName, guideStatus, isCNPJ, isCPF, isEditFormByRouteName, localeConfig, removeCNPJMask, removeCPFMask, removeDateMMAAAAMask, removeDateMask, removeFormatZipCode, removeMoneyMask, removeMoneyMaskAndConvert, removePhoneMask, sexOptions, splitUserName, useDownloadFile, useFilter, usePagination, useRouterUtils };
+export { PaginationEvent, addDateMMAAAAMask, addDateMask, addHoursMask, addMoneyMask, addUTC, agendaCalendarTypes, agendaTypeOptions, agendamentoStatus, compareDates, conselhos, dayOfWeek, detectCardType, formatCPF, formatCPFToLGPD, formatCreditCard, formatDate, formatDateEn, formatDateLong, formatDateMMAAAA, formatDateTime, formatDateTimeEn, formatDateTimeLong, formatFileName, formatFullDateLong, formatGender, formatHours, formatLocality, formatLocalityLong, formatMoneyNumberToString, formatNumericDateLong, formatPhone, formatZipCode, genderOptions, getAgendaCalendarTypes, getAgendaTypeOptions, getAgendamentoStatus, getHourInDate, getUserName, guideStatus, isCNPJ, isCPF, isEditFormByRouteName, localeConfig, removeCNPJMask, removeCPFMask, removeDateMMAAAAMask, removeDateMask, removeFormatZipCode, removeMoneyMask, removeMoneyMaskAndConvert, removePhoneMask, sexFilterOptions, sexOptions, splitUserName, useDownloadFile, useFilter, usePagination, useRouterUtils };
