@@ -32,6 +32,17 @@ export function addDateMask(date?: string) {
   return `${maskedDate.slice(0, 2)}/${maskedDate.slice(2, 4)}/${maskedDate.slice(4)}`;
 }
 
+export function removeHoursOfDate(date?: string | Date) {
+  try {
+    if (!date) return "";
+    if (typeof date === "object") date = date.toISOString();
+
+    return date.split("T")[0] || "";
+  } catch (error) {
+    return "";
+  }
+}
+
 export function removeDateMask(date?: string) {
   if (!date) return "";
   date = date.replace(/\D/g, "");
