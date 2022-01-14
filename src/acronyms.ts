@@ -78,3 +78,14 @@ export const agendamentoStatus = [
 export function getAgendamentoStatus(value: string) {
   return agendamentoStatus.find((item) => item.value === value) || agendamentoStatus[0];
 }
+
+export const specialtyTypes = [
+  { value: "C", label: "Consulta" },
+  { value: "E", label: "Exame" },
+  { value: "S", label: "Serviço" },
+  { value: "CI", label: "Cirúrgica" },
+];
+
+export function getSpecialtyTypes(value: string) {
+  return specialtyTypes.find((item) => item.value === value) || null;
+}
