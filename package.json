@@ -1,6 +1,6 @@
 {
-  "name": "obsis-utils",
-  "version": "0.1.1",
+  "name": "@obsis/obsis-utils",
+  "version": "0.2.0",
   "main": "dist/obsis-utils.js",
   "typings": "dist/obsis-utils.d.ts",
   "repository": {
@@ -41,5 +41,5 @@
     "vuex": "^4.0.0-0"
   },
   "license": "UNLICENSED",
-  "private": false
+  "dependencies": {}
 }
