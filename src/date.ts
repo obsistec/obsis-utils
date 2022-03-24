@@ -83,6 +83,20 @@ export function formatDateMMAAAA(date?: string) {
   }
 }
 
+export function formatDateMMAA(date?: string) {
+  try {
+    if (!date) return "";
+    if (date.length == 4) date = `20${date.slice(2)}-${date.slice(0, 2)}`;
+
+    return Intl.DateTimeFormat("pt-BR", {
+      month: "2-digit",
+      year: "2-digit",
+    }).format(new Date(addUTC(date)));
+  } catch {
+    return "";
+  }
+}
+
 export function addHoursMask(hours: string) {
   hours = hours.replaceAll(/\D/g, "");
 

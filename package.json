@@ -18,7 +18,8 @@
   "homepage": "https://github.com/obsistec/obsis-utils#readme",
   "description": "OBSIS Utils",
   "scripts": {
-    "build": "rm -rf dist && rollup -c"
+    "build": "rm -rf dist && rollup -c",
+    "test": "npx ts-node .test.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
