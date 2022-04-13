@@ -169,8 +169,9 @@ export function formatDateEn(date: any): string {
   }
 }
 
-export function formatDateTimeEn(date: any, hour: string) {
+export function formatDateTimeEn(date: any, hour?: "current" | string) {
   try {
+    if (hour === "current") hour = `${new Date().getHours()}:${new Date().getMinutes()}`;
     return `${formatDateEn(date)} ${hour}`;
   } catch (error) {
     return "";
