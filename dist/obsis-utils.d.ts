@@ -73,7 +73,7 @@ declare function addHoursMask(hours: string): string;
 declare function formatHours(hours?: string): string;
 declare function formatDateTime(date?: string, hour?: string): string;
 declare function formatDateEn(date: any): string;
-declare function formatDateTimeEn(date: any, hour: string): string;
+declare function formatDateTimeEn(date: any, hour?: "current" | string): string;
 declare function formatDateLong(date?: string): string;
 declare function formatFullDateLong(date?: string): string;
 declare function formatNumericDateLong(date?: string): string;
