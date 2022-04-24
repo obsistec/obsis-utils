@@ -73,11 +73,12 @@ declare function removeDateMask(date?: string): string;
 declare function addDateMMAAAAMask(date?: string): string;
 declare function removeDateMMAAAAMask(date?: string): string;
 declare function formatDateMMAAAA(date?: string): string;
+declare function formatDateMMAA(date?: string): string;
 declare function addHoursMask(hours: string): string;
 declare function formatHours(hours?: string): string;
 declare function formatDateTime(date?: string, hour?: string): string;
 declare function formatDateEn(date: any): string;
-declare function formatDateTimeEn(date: any, hour: string): string;
+declare function formatDateTimeEn(date: any, hour?: "current" | string): string;
 declare function formatDateLong(date?: string): string;
 declare function formatFullDateLong(date?: string): string;
 declare function formatNumericDateLong(date?: string): string;
@@ -197,4 +198,4 @@ declare function useRouterUtils(): {
     normalizeRouteParam: (routeParam?: string | null | undefined) => string;
 };
 
-export { PaginationEvent, addDateMMAAAAMask, addDateMask, addHoursMask, addMoneyMask, addUTC, agendaCalendarTypes, agendaTypeOptions, agendamentoStatus, compareDates, conselhos, dayOfWeek, detectCardType, formatCNPJ, formatCPF, formatCPFToLGPD, formatCreditCard, formatDate, formatDateEn, formatDateLong, formatDateMMAAAA, formatDateTime, formatDateTimeEn, formatDateTimeLong, formatFileName, formatFullDateLong, formatGender, formatHours, formatLocality, formatLocalityLong, formatMoneyNumberToString, formatNumericDateLong, formatPhone, formatZipCode, genderOptions, getAgendaCalendarTypes, getAgendaTypeOptions, getAgendamentoStatus, getHourInDate, getSpecialtyTypes, getUserName, guideStatus, isCNPJ, isCPF, isEditFormByRouteName, localeConfig, removeCNPJMask, removeCPFMask, removeDateMMAAAAMask, removeDateMask, removeFormatZipCode, removeHoursOfDate, removeMoneyMask, removeMoneyMaskAndConvert, removePhoneMask, sexFilterOptions, sexOptions, specialtyTypes, splitUserName, useDownloadFile, useFilter, usePagination, useRouterUtils };
+export { PaginationEvent, addDateMMAAAAMask, addDateMask, addHoursMask, addMoneyMask, addUTC, agendaCalendarTypes, agendaTypeOptions, agendamentoStatus, compareDates, conselhos, dayOfWeek, detectCardType, formatCNPJ, formatCPF, formatCPFToLGPD, formatCreditCard, formatDate, formatDateEn, formatDateLong, formatDateMMAA, formatDateMMAAAA, formatDateTime, formatDateTimeEn, formatDateTimeLong, formatFileName, formatFullDateLong, formatGender, formatHours, formatLocality, formatLocalityLong, formatMoneyNumberToString, formatNumericDateLong, formatPhone, formatZipCode, genderOptions, getAgendaCalendarTypes, getAgendaTypeOptions, getAgendamentoStatus, getHourInDate, getSpecialtyTypes, getUserName, guideStatus, isCNPJ, isCPF, isEditFormByRouteName, localeConfig, removeCNPJMask, removeCPFMask, removeDateMMAAAAMask, removeDateMask, removeFormatZipCode, removeHoursOfDate, removeMoneyMask, removeMoneyMaskAndConvert, removePhoneMask, sexFilterOptions, sexOptions, specialtyTypes, splitUserName, useDownloadFile, useFilter, usePagination, useRouterUtils };
