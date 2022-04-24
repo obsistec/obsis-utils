@@ -11,9 +11,14 @@ declare const sexOptions: {
 }[];
 declare const agendaTypeOptions: {
     label: string;
+    title: string;
     value: string;
 }[];
-declare function getAgendaTypeOptions(value: string): {};
+declare function getAgendaTypeOptions(value: string): {
+    label: string;
+    title: string;
+    value: string;
+} | null;
 declare const dayOfWeek: {
     value: string;
     label: string;
@@ -35,7 +40,7 @@ declare function getAgendaCalendarTypes(value: any): {
     label: string;
     value: string;
     color: string;
-} | undefined;
+} | null;
 declare const agendamentoStatus: {
     value: string;
     label: string;

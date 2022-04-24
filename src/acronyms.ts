@@ -10,14 +10,14 @@ export const sexOptions = [
 ];
 
 export const agendaTypeOptions = [
-  { label: "Consulta", value: "C" },
-  { label: "Exame", value: "E" },
-  { label: "Laboratório", value: "L" },
-  { label: "Procedimento", value: "P" },
+  { label: "Consulta", title: "Consulta", value: "C" },
+  { label: "Exame", title: "Exame de Imagem", value: "E" },
+  { label: "Laboratório", title: "Exame Laboratorial", value: "L" },
+  { label: "Procedimento", title: "Procedimento", value: "P" },
 ];
 
 export function getAgendaTypeOptions(value: string) {
-  return agendaTypeOptions.find((item) => item.value === value) || {};
+  return agendaTypeOptions.find((item) => item.value === value) || null;
 }
 
 export const dayOfWeek = [
@@ -60,7 +60,7 @@ export const agendaCalendarTypes = [
 ];
 
 export function getAgendaCalendarTypes(value: any) {
-  return agendaCalendarTypes.find((item) => item.value === value);
+  return agendaCalendarTypes.find((item) => item.value === value) || null;
 }
 
 export const agendamentoStatus = [
