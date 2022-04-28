@@ -89,3 +89,13 @@ export const specialtyTypes = [
 export function getSpecialtyTypes(value: string) {
   return specialtyTypes.find((item) => item.value === value) || null;
 }
+
+export const batchSituations = [
+  { value: "PG", label: "Pago" },
+  { value: "CA", label: "Cancelado" },
+  { value: "AB", label: "Aberto" },
+];
+
+export function getBatchSituation(value: string) {
+  return batchSituations.find((item) => item.value === value) || null;
+}
