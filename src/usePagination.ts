@@ -24,7 +24,7 @@ export function usePagination(params: {
     () => (secondaryModule ? store.state[module][secondaryModule] : store.state[module])[params.field || "pagination"]
   );
 
-  function handleUpdateCurrentPage(event: Partial<PaginationEvent> & { [key: string | number]: any }) {
+  function handleUpdateCurrentPage(event: PaginationEvent & any) {
     const page = (event.page || 0) + 1;
 
     router.replace({ query: { ...route.query, pg: page } });
