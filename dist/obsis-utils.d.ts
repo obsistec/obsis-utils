@@ -197,7 +197,10 @@ declare function usePagination(params: {
     updateList: () => any;
 }): {
     pagination: vue.ComputedRef<any>;
-    handleUpdateCurrentPage: (event: PaginationEvent) => void;
+    handleUpdateCurrentPage: (event: Partial<PaginationEvent> & {
+        [key: string]: any;
+        [key: number]: any;
+    }) => void;
 };
 
 declare function useRouterUtils(): {
